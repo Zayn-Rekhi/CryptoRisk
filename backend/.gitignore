@@ -1,0 +1,13 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build and binaries
+*.exe
+/bin
+
+# OS and editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,53 @@
+input User {
+  username: String!
+  password: String!
+}
+
+input Profile {
+  profileType: String!
+  entityRef: String!
+  network: String!
+  action: String
+}
+
+type ProfileResponse {
+  profileType: String!
+  entityRef: String!
+  network: String!
+  metrics: [ProfileMetrics!]
+}
+
+type ProfileMetrics {
+  contractAddress: String
+  contractName: String
+  logoURL: String
+  totalBalance: Float
+  balanceVolatility: Float
+  downsideVolatility: Float
+  maxDrawdown: Float
+  drawDownVolatility: Float
+  giniCoefficientOfBalances: Float
+}
+
+type Query {
+  metrics(profile: [Profile!]!, window: Int!): [ProfileResponse!]!
+  profiles: [ProfileResponse!]!
+}
+
+input GoogleToken {
+  token: String!
+}
+
+input RefreshTokenInput{
+  token: String!
+}
+
+type Mutation {
+  createUser(input: User!): String!
+  updateUserProfile(input: Profile!): String!
+
+  login(input: User!): String!
+  loginGoogle(input: GoogleToken!): String!
+
+  refreshToken(input: RefreshTokenInput!): String!
+}
