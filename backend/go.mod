@@ -1,12 +1,15 @@
 module github.com/Zayn-Rekhi/cryptorisk
 
-go 1.24.4
+go 1.24.0
+
+toolchain go1.24.4
 
 require (
 	github.com/99designs/gqlgen v0.17.86
 	github.com/go-chi/chi/v5 v5.2.4
 	github.com/golang-jwt/jwt/v5 v5.3.0
 	github.com/joho/godotenv v1.5.1
+	github.com/segmentio/kafka-go v0.4.50
 	github.com/vektah/gqlparser/v2 v2.5.31
 	go.mongodb.org/mongo-driver/v2 v2.4.1
 	golang.org/x/crypto v0.47.0
@@ -31,6 +34,7 @@ require (
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hashicorp/golang-lru/v2 v2.0.7 // indirect
 	github.com/klauspost/compress v1.16.7 // indirect
+	github.com/pierrec/lz4/v4 v4.1.15 // indirect
 	github.com/sosodev/duration v1.3.1 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
